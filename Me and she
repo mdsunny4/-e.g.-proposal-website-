@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Mine?</title>
+    <style>
+        body {
+            text-align: center;
+            background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+            font-family: 'Arial', sans-serif;
+            color: white;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .heart {
+            font-size: 30px;
+            animation: float 1.5s infinite alternate;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-10px); }
+        }
+        .btn-yes {
+            font-size: 25px;
+            padding: 15px 30px;
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .btn-yes:hover {
+            background-color: #ff1e45;
+        }
+        .btn-no {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #ccc;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            position: absolute;
+            transition: 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You Be Mine? ❤️</h1>
+    <p>Dear [Shahinur Akter Zothi],<br>  
+       From the moment I met you, my heart knew you were special.  
+       You make my days brighter, my nights warmer, and my heart happier.  
+       So today, I just have one question for you...  
+    </p>
+    <button class="btn-yes" onclick="alert('Yay! You just made my life perfect! ❤️')">Yes, I will!</button>
+    <button class="btn-no" id="noButton">No</button>
+
+    <script>
+        const noButton = document.getElementById("noButton");
+        noButton.addEventListener("mouseover", function() {
+            const x = Math.random() * window.innerWidth * 0.6;
+            const y = Math.random() * window.innerHeight * 0.6;
+            noButton.style.position = "absolute";
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
